@@ -39,56 +39,56 @@ const skills = reactive({
         {
             id: 1,
             option: 1,
-            name: 'Laravel',
-            experience: '3 years',
+            name: 'Javascript',
+            experience: '4 years',
         },
         {
             id: 2,
             option: 1,
-            name: 'Express.js',
-            experience: '1 year',
+            name: 'Node.js',
+            experience: '2 year',
         },
         {
             id: 3,
-            option: 1,
-            name: 'Nest.js',
-            experience: '3 months',
+            option: 2,
+            name: 'Vue.js',
+            experience: '4 years',
         },
         {
             id: 4,
-            option: 1,
-            name: 'Yii2',
-            experience: '3 months',
+            option: 2,
+            name: 'Vuex',
+            experience: '4 years',
         },
         {
             id: 5,
             option: 2,
-            name: 'Vue.js',
-            experience: '3 years',
+            name: 'React.js',
+            experience: '6 months',
         },
         {
             id: 6,
-            option: 2,
-            name: 'Nuxt.js',
-            experience: '3 months',
-        },
-        {
-            id: 7,
             option: 3,
             name: 'Vuetify',
             experience: '1 year',
         },
         {
-            id: 8,
+            id: 7,
             option: 3,
             name: 'Bootstrap',
             experience: '1 year',
         },
         {
+            id: 8,
+            option: 3,
+            name: 'Element Plus',
+            experience: '4 year',
+        },
+        {
             id: 9,
             option: 3,
-            name: 'Tailwind',
-            experience: '1 year',
+            name: 'Prime Vue',
+            experience: '4 year',
         },
         {
             id: 10,
@@ -110,75 +110,51 @@ const skills = reactive({
         },
         {
             id: 13,
-            option: 4,
-            name: 'SQL Server',
-            experience: '6 months',
-        },
-        {
-            id: 14,
-            option: 4,
-            name: 'Firebase',
-            experience: '6 months',
-        },
-        {
-            id: 15,
-            option: 4,
-            name: 'Redis',
-            experience: '3 months',
-        },
-        {
-            id: 16,
             option: 5,
             name: 'Docker',
             experience: '1 year',
         },
         {
-            id: 17,
-            option: 5,
-            name: 'GCP',
-            experience: '1 year',
-        },
-        {
-            id: 18,
-            option: 5,
-            name: 'AWS',
-            experience: '1 year',
-        },
-        {
-            id: 19,
+            id: 14,
             option: 5,
             name: 'CI/CD',
             experience: '6 months',
         },
         {
-            id: 20,
-            option: 5,
-            name: 'Heroku',
-            experience: '3 months',
-        },
-        {
-            id: 21,
+            id: 15,
             option: 6,
-            name: 'Figma',
-            experience: '2 years',
+            name: 'npm',
+            experience: '4 years',
         },
         {
-            id: 22,
-            option: 6,
-            name: 'Photoshop',
-            experience: '2 years',
-        },
-        {
-            id: 23,
+            id: 16,
             option: 6,
             name: 'Vite',
-            experience: '2 years',
+            experience: '4 years',
         },
         {
-            id: 24,
+            id: 17,
             option: 6,
             name: 'REST API',
-            experience: '3 years',
+            experience: '4 years',
+        },
+        {
+            id: 18,
+            option: 6,
+            name: 'Git Version Control',
+            experience: '4 years',
+        },
+        {
+            id: 19,
+            option: 6,
+            name: 'axios',
+            experience: '4 years',
+        },
+        {
+            id: 20,
+            option: 6,
+            name: 'MVVM',
+            experience: '4 years',
         },
     ],
 });
@@ -193,7 +169,7 @@ const toggleOption = (option) => (activeOption.value = activeOption.value === op
 </script>
 <template>
     <div class="technical-skills">
-        <h5 class="text-h5 text-uppercase text-center text-deep-purple-accent-1">Technical skills</h5>
+        <h5 class="text-h6 text-uppercase text-center text-deep-purple-accent-1">Technical skills</h5>
         <v-slide-group show-arrows center-active class="mt-3">
             <v-slide-group-item v-for="option in skills.options" :key="option.id" v-slot="{ isSelected, toggle }">
                 <v-btn
@@ -215,7 +191,7 @@ const toggleOption = (option) => (activeOption.value = activeOption.value === op
                 >
                     <v-item v-slot="{ isSelected, selectedClass, toggle }">
                         <v-card :class="['technical-skills__item', selectedClass]" @click="toggle">
-                            <div class="text-h5 text-center">{{ isSelected ? skill.experience : skill.name }}</div>
+                            <div class="text-h6 text-center">{{ isSelected ? skill.experience : skill.name }}</div>
                         </v-card>
                     </v-item>
                 </v-col>

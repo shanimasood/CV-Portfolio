@@ -13,36 +13,29 @@ const data = reactive([
     {
         icon: 'mdi-cellphone-sound',
         title: 'Phone',
-        value: '+ 380 (63) 872 09 90',
-        href: 'tel:+380638720990',
+        value: '+92 303 5506107',
+        href: 'tel:+923035506107',
         target: null,
     },
     {
         icon: 'mdi-message-text',
-        title: 'Telegram',
-        value: '@fordiquez',
-        href: 'https://t.me/fordiquez',
+        title: 'Whatsapp',
+        value: '@ZeeshanMasood ',
+        href: 'https://wa.me/+923035506107',
         target: '_blank',
     },
     {
         icon: 'mdi-gmail',
         title: 'Gmail',
-        value: 'ruslan.tsiapko@gmail.com',
-        href: 'mailto:ruslan.tsiapko@gmail.com',
+        value: 'mznhmbro@gmail.com',
+        href: 'mailto:mznhmbro@gmail.com',
         target: null,
-    },
-    {
-        icon: 'mdi-github',
-        title: 'GitHub',
-        value: 'fordiquez',
-        href: 'https://github.com/fordiquez',
-        target: '_blank',
     },
     {
         icon: 'mdi-linkedin',
         title: 'LinkedIn',
-        value: 'ruslan.tsiapko',
-        href: 'https://www.linkedin.com/in/ruslan-tsiapko-a41397241/',
+        value: 'zeeshan.masood',
+        href: 'https://www.linkedin.com/in/muhammad-zeeshan-masood-abb6871b8/',
         target: '_blank',
     },
 ]);
@@ -50,10 +43,10 @@ const data = reactive([
 
 <template>
     <div class="contact-info">
-        <h5 class="text-h5 text-uppercase text-deep-purple-accent-1">{{ header }}</h5>
+        <h5 class="text-h6 text-uppercase text-deep-purple-accent-1">{{ header }}</h5>
         <div class="contact-info__item mt-3" v-for="(item, i) in data" :key="i">
             <div class="contact-info__icon">
-                <v-icon size="x-large">{{ item.icon }}</v-icon>
+                <v-icon size="small">{{ item.icon }}</v-icon>
             </div>
             <div class="contact-info__content">
                 <span class="text-uppercase text-button">{{ item.title }}</span>

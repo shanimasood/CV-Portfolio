@@ -14,8 +14,8 @@ defineComponent({
 const { xs, sm, smAndDown, md, mdAndDown } = useDisplay();
 
 const profile = reactive({
-    fullName: 'Ruslan Tsiapko',
-    position: 'Full-stack Web Developer',
+    fullName: 'Muhammad Zeeshan Masood',
+    position: 'Front-End Web Developer',
 });
 </script>
 <template>
@@ -29,11 +29,11 @@ const profile = reactive({
             <div class="profile__text">
                 <h1
                     class="text-uppercase font-weight-regular text-deep-purple-accent-1"
-                    :class="[xs ? 'text-h3' : 'text-h2', { 'mt-5': smAndDown }]"
+                    :class="[xs ? 'text-h4' : 'text-h3', { 'mt-5': smAndDown }]"
                 >
                     {{ profile.fullName }}
                 </h1>
-                <h2 class="text-h5 text-uppercase font-weight-light mt-5 text-deep-purple-lighten-1">
+                <h2 class="text-h6 text-uppercase font-weight-light mt-5 text-deep-purple-lighten-1">
                     {{ profile.position }}
                 </h2>
             </div>

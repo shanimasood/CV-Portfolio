@@ -13,27 +13,27 @@ const data = reactive([
     {
         icon: 'mdi-calendar-account',
         title: 'Birth date',
-        value: '22 February, 2001',
+        value: '05 August, 1997',
     },
     {
         icon: 'mdi-city',
         title: 'Birth place',
-        value: 'Mykolaiv, Ukraine',
+        value: 'Rawalpindi, Pakistan',
     },
     {
         icon: 'mdi-compass-rose',
         title: 'Location',
-        value: 'Odesa, Ukraine',
+        value: 'Islamabad, Pakistan',
     },
 ]);
 </script>
 
 <template>
     <div class="personal-info">
-        <h5 class="text-h5 text-uppercase text-deep-purple-accent-1">{{ header }}</h5>
+        <h5 class="text-h6 text-uppercase text-deep-purple-accent-1">{{ header }}</h5>
         <div class="personal-info__item mt-3" v-for="(item, i) in data" :key="i">
             <div class="personal-info__icon">
-                <v-icon size="x-large">{{ item.icon }}</v-icon>
+                <v-icon size="small">{{ item.icon }}</v-icon>
             </div>
             <div class="personal-info__content">
                 <span class="text-uppercase text-button">{{ item.title }}</span>

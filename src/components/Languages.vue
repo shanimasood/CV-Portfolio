@@ -11,22 +11,18 @@ defineProps({
 
 const languages = reactive([
     {
-        name: 'Ukrainian',
-        value: 100,
-    },
-    {
-        name: 'Russian',
-        value: 100,
-    },
-    {
         name: 'English',
-        value: 55,
+        value: 100,
     },
+    {
+        name: 'Urdu',
+        value: 100,
+    }
 ]);
 </script>
 <template>
     <div class="languages">
-        <h5 class="text-h5 text-uppercase text-deep-purple-accent-1">{{ header }}</h5>
+        <h5 class="text-h6 text-uppercase text-deep-purple-accent-1">{{ header }}</h5>
         <div v-for="(language, i) in languages" :key="i" class="mt-3">
             <span class="text-subtitle-1 font-weight-light">{{ language.name }}</span>
             <div class="d-flex align-center">
