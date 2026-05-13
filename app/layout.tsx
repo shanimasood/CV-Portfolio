@@ -29,7 +29,7 @@ const mono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: '#f3ede0',
+  themeColor: '#070605',
   width: 'device-width',
   initialScale: 1,
 };
@@ -72,7 +72,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
+      className={`${sans.variable} ${serif.variable} ${mono.variable} dark`}
     >
       <body className="min-h-screen overflow-x-hidden antialiased">
         <SmoothScroll>

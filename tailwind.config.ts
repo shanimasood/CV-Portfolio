@@ -81,9 +81,9 @@ const config: Config = {
       },
       backdropBlur: { xs: '2px' },
       boxShadow: {
-        glow: '0 0 60px -10px rgba(95, 100, 41, 0.30)',
-        'glow-lg': '0 0 100px -10px rgba(95, 100, 41, 0.40)',
-        'inner-glow': 'inset 0 1px 0 0 rgba(42, 31, 23, 0.06)',
+        glow: '0 0 60px -10px rgba(184, 140, 42, 0.35)',
+        'glow-lg': '0 0 100px -10px rgba(184, 140, 42, 0.45)',
+        'inner-glow': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.08)',
       },
     },
   },

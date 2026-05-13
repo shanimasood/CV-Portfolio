@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, Sparkles, ExternalLink, Github as GithubIcon, FileText, ImageIcon } from 'lucide-react';
+import { ArrowUpRight, Sparkles, ExternalLink, Github as GithubIcon, FileText } from 'lucide-react';
 import { PROJECTS } from '@/lib/data';
 import type { Project } from '@/types';
 import Reveal from '@/components/ui/Reveal';
@@ -124,6 +124,7 @@ function ProjectCard({ project, featured }: { project: Project; featured?: boole
 }
 
 function ProjectMedia({ project, featured }: { project: Project; featured?: boolean }) {
+  if (!project.image) return null;
   const aspect = featured ? 'aspect-[16/9]' : 'aspect-[4/3]';
   return (
     <div
@@ -132,24 +133,13 @@ function ProjectMedia({ project, featured }: { project: Project; featured?: bool
         aspect,
       )}
     >
-      {project.image ? (
-        <Image
-          src={project.image}
-          alt={`${project.title} — preview`}
-          fill
-          sizes={featured ? '(min-width: 1024px) 66vw, 100vw' : '(min-width: 1024px) 33vw, 100vw'}
-          className="object-cover"
-        />
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-flame-500/5 via-transparent to-violet-500/5">
-          <div className="flex flex-col items-center gap-2 text-ink-500">
-            <ImageIcon className="w-8 h-8" strokeWidth={1.5} />
-            <span className="text-[10px] uppercase tracking-[0.18em] font-mono">
-              Preview soon
-            </span>
-          </div>
-        </div>
-      )}
+      <Image
+        src={project.image}
+        alt={`${project.title} — preview`}
+        fill
+        sizes={featured ? '(min-width: 1024px) 66vw, 100vw' : '(min-width: 1024px) 33vw, 100vw'}
+        className="object-cover"
+      />
     </div>
   );
 }

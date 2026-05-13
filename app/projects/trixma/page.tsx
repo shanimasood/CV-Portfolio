@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowLeft, Sparkles } from 'lucide-react';
+import { ArrowLeft, Sparkles, Github as GithubIcon } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import AnimatedText from '@/components/ui/AnimatedText';
 
@@ -106,14 +106,14 @@ export default function TrixmaCaseStudy() {
         <Reveal>
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.18em] text-ink-300 hover:text-flame-500 transition-colors mb-12"
+            className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.18em] text-ink-300 hover:text-flame-400 transition-colors mb-12"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             Back to work
           </Link>
 
           <div className="flex items-baseline gap-4 mb-3">
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-500">
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-400">
               Case study · 01
             </span>
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-300">
@@ -133,7 +133,7 @@ export default function TrixmaCaseStudy() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.16em] font-mono px-2.5 py-1 rounded-full text-flame-500 border border-flame-500/30 bg-flame-500/10">
+            <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.16em] font-mono px-2.5 py-1 rounded-full text-flame-400 border border-flame-500/30 bg-flame-500/10">
               <Sparkles className="w-3 h-3" />
               Solo build
             </span>
@@ -143,6 +143,18 @@ export default function TrixmaCaseStudy() {
             <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.16em] font-mono px-2.5 py-1 rounded-full text-ink-200 border border-glass-border bg-glass">
               100% TypeScript
             </span>
+          </div>
+
+          <div className="mt-8">
+            <a
+              href="https://github.com/shanimasood/Trixma-Invoicing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] font-mono px-5 py-3 rounded-full border border-flame-500/40 text-flame-300 bg-flame-500/10 hover:bg-flame-500/20 hover:border-flame-500/60 transition-colors"
+            >
+              <GithubIcon className="w-4 h-4" />
+              View source on GitHub
+            </a>
           </div>
         </Reveal>
       </section>
@@ -167,7 +179,7 @@ export default function TrixmaCaseStudy() {
       <section className="container mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <Reveal className="lg:col-span-4">
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-500 mb-3">
+            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-400 mb-3">
               01 · Overview
             </div>
           </Reveal>
@@ -196,7 +208,7 @@ export default function TrixmaCaseStudy() {
       <section className="container mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <Reveal className="lg:col-span-4">
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-500 mb-3">
+            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-400 mb-3">
               02 · Stack
             </div>
             <p className="text-ink-300 text-sm leading-relaxed max-w-xs">
@@ -244,7 +256,7 @@ export default function TrixmaCaseStudy() {
       <section className="container mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <Reveal className="lg:col-span-4">
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-500 mb-3">
+            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-400 mb-3">
               03 · Features
             </div>
             <p className="text-ink-300 text-sm leading-relaxed max-w-xs">
@@ -270,7 +282,7 @@ export default function TrixmaCaseStudy() {
       <section className="container mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <Reveal className="lg:col-span-4">
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-500 mb-3">
+            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-flame-400 mb-3">
               04 · Decisions
             </div>
             <p className="text-ink-300 text-sm leading-relaxed max-w-xs">
@@ -308,7 +320,7 @@ export default function TrixmaCaseStudy() {
             </div>
             <Link
               href="/projects/cms"
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] font-mono px-5 py-3 rounded-full border border-flame-500/40 text-flame-500 bg-flame-500/10 hover:bg-flame-500/20 hover:border-flame-500/60 transition-colors"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] font-mono px-5 py-3 rounded-full border border-flame-500/40 text-flame-300 bg-flame-500/10 hover:bg-flame-500/20 hover:border-flame-500/60 transition-colors"
             >
               CMS case study
               <ArrowLeft className="w-3.5 h-3.5 rotate-180" />

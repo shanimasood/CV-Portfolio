@@ -130,7 +130,10 @@ export const PROJECTS: Project[] = [
       'Refresh-token rotation per device; hash-only storage, single-use rotation',
       'Client portal — invoice viewing with invite tokens and audit-traceable events',
     ],
-    links: { case: '/projects/trixma' },
+    links: {
+      case: '/projects/trixma',
+      github: 'https://github.com/shanimasood/Trixma-Invoicing',
+    },
     featured: true,
   },
 ];

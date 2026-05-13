@@ -18,8 +18,8 @@ export default function OpenGraphImage() {
           justifyContent: 'space-between',
           padding: 80,
           background:
-            'radial-gradient(ellipse at top left, rgba(95,100,41,0.10) 0%, transparent 55%), radial-gradient(ellipse at bottom right, rgba(140,80,30,0.08) 0%, transparent 55%), #f3ede0',
-          color: '#2a1f17',
+            'radial-gradient(ellipse at top left, rgba(184,140,42,0.20) 0%, transparent 55%), radial-gradient(ellipse at bottom right, rgba(120,80,220,0.12) 0%, transparent 55%), #070605',
+          color: '#f6f5f1',
           fontFamily: 'sans-serif',
         }}
       >
@@ -31,7 +31,7 @@ export default function OpenGraphImage() {
             fontSize: 22,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#5f6429',
+            color: '#d4aa3c',
             fontFamily: 'monospace',
           }}
         >
@@ -43,8 +43,8 @@ export default function OpenGraphImage() {
               alignItems: 'center',
               justifyContent: 'center',
               borderRadius: 10,
-              background: 'linear-gradient(135deg, #5f6429 0%, #7c7637 100%)',
-              color: '#f3ede0',
+              background: 'linear-gradient(135deg, #b88c2a 0%, #d4aa3c 100%)',
+              color: '#fff',
               fontSize: 22,
               fontWeight: 700,
             }}
@@ -63,7 +63,7 @@ export default function OpenGraphImage() {
               fontWeight: 600,
               maxWidth: 1000,
               backgroundImage:
-                'linear-gradient(135deg, #1c130c 0%, #4a392b 60%, #5f6429 100%)',
+                'linear-gradient(135deg, #ffffff 0%, #c4bdab 60%, #d4aa3c 100%)',
               backgroundClip: 'text',
               color: 'transparent',
             }}
@@ -73,7 +73,7 @@ export default function OpenGraphImage() {
           <div
             style={{
               fontSize: 36,
-              color: '#4a392b',
+              color: '#c4bdab',
               maxWidth: 900,
               fontStyle: 'italic',
               fontFamily: 'serif',
@@ -89,7 +89,7 @@ export default function OpenGraphImage() {
             justifyContent: 'space-between',
             alignItems: 'center',
             fontSize: 22,
-            color: '#6f5c4a',
+            color: '#9e9787',
             fontFamily: 'monospace',
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
