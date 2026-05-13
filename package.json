@@ -9,6 +9,9 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
