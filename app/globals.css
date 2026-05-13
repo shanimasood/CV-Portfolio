@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: 8 7 6;
-  --foreground: 246 245 241;
-  --flame: 255 84 33;
+  --background: 243 237 224;
+  --foreground: 42 31 23;
+  --flame: 95 100 41;
 }
 
 * {
@@ -39,27 +39,27 @@ html.lenis body {
 
 /* Selection */
 ::selection {
-  background: rgba(255, 84, 33, 0.35);
-  color: #fff;
+  background: rgba(95, 100, 41, 0.25);
+  color: #1c130c;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(42, 31, 23, 0.12);
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 84, 33, 0.4); }
+::-webkit-scrollbar-thumb:hover { background: rgba(95, 100, 41, 0.5); }
 
 /* Base layer extensions */
 @layer base {
   body {
-    @apply font-sans bg-ink-900 text-ink-50;
+    @apply font-sans bg-ink-900 text-ink-100;
     background-image:
-      radial-gradient(ellipse at top, rgba(255, 84, 33, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom right, rgba(120, 80, 220, 0.06) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(255, 84, 33, 0.04) 0%, transparent 50%);
+      radial-gradient(ellipse at top, rgba(95, 100, 41, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(140, 80, 30, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(95, 100, 41, 0.03) 0%, transparent 50%);
     background-attachment: fixed;
   }
 
@@ -79,20 +79,20 @@ html.lenis body {
 
   .grid-bg {
     background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(42,31,23,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(42,31,23,0.06) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #fff 0%, #c4bdab 60%, #ff7042 100%);
+    background: linear-gradient(135deg, #1c130c 0%, #4a392b 60%, #5f6429 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-flame {
-    background: linear-gradient(135deg, #ff5421 0%, #ff9469 60%, #ffe1cf 100%);
+    background: linear-gradient(135deg, #5f6429 0%, #7c7637 60%, #a8a04e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
