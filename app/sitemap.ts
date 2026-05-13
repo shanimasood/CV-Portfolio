@@ -11,5 +11,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
+    {
+      url: `${BASE_URL}/projects/trixma`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/projects/cms`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.8,
+    },
   ];
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, Sparkles, ExternalLink, Github as GithubIcon, FileText, ImageIcon } from 'lucide-react';
 import { PROJECTS } from '@/lib/data';
@@ -165,22 +166,33 @@ function ProjectLink({
   primary?: boolean;
 }) {
   const external = href.startsWith('http');
+  const classes = cn(
+    'inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-mono px-3 py-1.5 rounded-full border transition-colors',
+    primary
+      ? 'border-flame-500/40 text-flame-300 bg-flame-500/10 hover:bg-flame-500/20 hover:border-flame-500/60'
+      : 'border-glass-border text-ink-200 hover:text-flame-400 hover:border-flame-500/40',
+  );
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className={classes}
+      >
+        <Icon className="w-3.5 h-3.5" />
+        {label}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      target={external ? '_blank' : undefined}
-      rel={external ? 'noopener noreferrer' : undefined}
-      onClick={(e) => e.stopPropagation()}
-      className={cn(
-        'inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-mono px-3 py-1.5 rounded-full border transition-colors',
-        primary
-          ? 'border-flame-500/40 text-flame-300 bg-flame-500/10 hover:bg-flame-500/20 hover:border-flame-500/60'
-          : 'border-glass-border text-ink-200 hover:text-flame-400 hover:border-flame-500/40',
-      )}
-    >
+    <Link href={href} onClick={(e) => e.stopPropagation()} className={classes}>
       <Icon className="w-3.5 h-3.5" />
       {label}
-    </a>
+    </Link>
   );
 }
 
